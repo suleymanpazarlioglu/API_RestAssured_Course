@@ -1,6 +1,9 @@
 package com.cydeo.pojo;
 
-import lombok.*;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
@@ -8,6 +11,5 @@ import lombok.*;
 public class Link {
     private String rel;
     private String href;
-
 
 }

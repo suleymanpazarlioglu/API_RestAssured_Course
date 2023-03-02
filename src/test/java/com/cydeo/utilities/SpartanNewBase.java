@@ -17,15 +17,20 @@ public class SpartanNewBase {
     @BeforeAll
     public static void init(){
         //save baseurl inside this variable so that we dont need to type each http method.
-        baseURI = "http://44.195.19.167";
+        baseURI = "http://54.243.0.145";
         port = 7000;
         basePath ="/api";
 
-        requestSpec = given()
+       adminSpec = given()
                         .accept(ContentType.JSON)
                         .and()
                         .auth().basic("admin", "admin")
                         .log().all();
+        requestSpec = given()
+                      .accept(ContentType.JSON)
+                      .and()
+                      .auth().basic("admin", "admin")
+                      .log().all();
 
         userSpec =given()
                 .accept(ContentType.JSON)
@@ -37,9 +42,6 @@ public class SpartanNewBase {
                 .and()
                 .contentType(ContentType.JSON)
                 .logDetail(LogDetail.ALL);  //logging with response specficiation
-
-
-
     }
 
     @AfterAll

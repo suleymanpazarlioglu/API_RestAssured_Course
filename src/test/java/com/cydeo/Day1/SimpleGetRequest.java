@@ -2,22 +2,23 @@ package com.cydeo.Day1;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 
 public class SimpleGetRequest {
 
-    String url = "http://44.202.119.26:8000/api/spartans";
+    String url = "http://54.243.0.145:8000/api/spartans";
 
     @Test
     public void test1(){
-        //send a get request and save response inside the Response object
-        Response response = RestAssured.get(url);
+        Response response=RestAssured.get(url);//send a get request and save response inside the Response object
 
-        //print response status code
-        System.out.println(response.statusCode());
+        System.out.println(response.statusCode());//print response status code
 
-        //print response body
-        response.prettyPrint();
+        response.prettyPrint();//print response body
+
+        Assertions.assertEquals(response.statusCode(),200);
 
     }
 

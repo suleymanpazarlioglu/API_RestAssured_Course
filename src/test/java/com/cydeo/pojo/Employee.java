@@ -1,13 +1,16 @@
 package com.cydeo.pojo;
 
-
-import com.fasterxml.jackson.annotation.*;
-import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
+
 public class Employee {
 
     @JsonProperty("first_name")
@@ -18,4 +21,6 @@ public class Employee {
     private String jobId;
 
     private int salary;
+
+
 }

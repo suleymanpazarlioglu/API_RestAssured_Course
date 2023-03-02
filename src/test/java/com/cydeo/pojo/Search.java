@@ -29,4 +29,6 @@ public class Search {
     public void setTotalElement(int totalElement) {
         this.totalElement = totalElement;
     }
+
+
 }
